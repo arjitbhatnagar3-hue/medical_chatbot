@@ -1,0 +1,11 @@
+# One-click Render config. Push your repo, connect it to Render, and this
+# builds/deploys the Docker image. Paste HF_TOKEN in the Render dashboard.
+services:
+  - type: web
+    name: medical-chatbot
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: HF_TOKEN
+        sync: false   
