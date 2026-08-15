@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MediBot — Chat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="chat-shell">
+    <header class="chat-header">
+      <a class="brand" href="/">
+        <span class="logo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0a1428" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 5 4-12 2 7h6"/></svg>
+        </span>
+        MediBot
+      </a>
+      <div class="spacer">
+        <div class="status"><span class="dot" id="status-dot"></span><span id="status-text">connecting…</span></div>
+        <button class="icon-btn" id="new-chat">New chat</button>
+        <a class="icon-btn" href="/">Home</a>
+      </div>
+    </header>
+
+    <div class="banner" id="banner"></div>
+
+    <div class="chat-main">
+      <div id="messages"></div>
+
+      <div class="input-wrap">
+        <form id="chat-form">
+          <div class="field">
+            <textarea id="user-input" rows="1" placeholder="Ask a medical question…  (Enter to send, Shift+Enter for newline)" autofocus></textarea>
+          </div>
+          <button type="submit" class="send" id="send-btn" title="Send">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0a1428" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22 11 13 2 9 22 2z"/></svg>
+          </button>
+        </form>
+        <div class="page-footer">MediBot is not a substitute for professional medical advice.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a2bae1ff2af2a74f',t:'MTc4NjgyNTA0Ng=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
